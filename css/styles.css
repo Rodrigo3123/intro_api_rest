@@ -1,0 +1,55 @@
+/* Estilo general */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Card del formulario */
+.card {
+  border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Botón */
+button[type="submit"] {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+/* Tabla */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Último status */
+#ultimoStatus {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}

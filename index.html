@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control IoT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">IoT Controller</a>
+      <a href="registros.html" class="btn btn-outline-light ms-auto">Ver últimos 10</a>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container my-4 flex-grow-1">
+    <h2 class="text-center mb-4">Gestión de Dispositivos IoT</h2>
+
+    <!-- FORMULARIO -->
+    <div class="card p-4 shadow-lg mb-4">
+      <h5 class="card-title">Agregar Comando</h5>
+      <form id="formStatus">
+        <div class="mb-3">
+          <label for="status" class="form-label">Selecciona acción</label>
+          <select id="status" class="form-select" required>
+            <option value="">-- Selecciona --</option>
+            <option>adelante</option>
+            <option>atrás</option>
+            <option>detener</option>
+            <option>derecha</option>
+            <option>izquierda</option>
+            <option>adelante derecha</option>
+            <option>adelante izquierda</option>
+            <option>atrás derecha</option>
+            <option>atrás izquierda</option>
+            <option>giro 90° derecha</option>
+            <option>giro 90° izquierda</option>
+            <option>giro 360° derecha</option>
+            <option>giro 360° izquierda</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+    <!-- ÚLTIMO VALOR -->
+    <div class="alert alert-info text-center" id="ultimoStatus">
+      Último status: <strong>-</strong>
+    </div>
+
+    <!-- TABLA -->
+    <h5 class="mt-4">Últimos 5 registros</h5>
+    <table class="table table-striped table-bordered shadow">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Status</th>
+          <th>IP</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody id="tablaRegistros"></tbody>
+    </table>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light text-center py-3 mt-auto">
+    <p class="mb-0">Desarrollado por GAMERO SERRANO RODRIGO - Ingeniería en Sistemas</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
